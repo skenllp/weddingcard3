@@ -124,6 +124,33 @@
     .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.75s ease, transform 0.75s ease; }
     .reveal.visible { opacity: 1; transform: translateY(0); }
 
+    /* ── Hero content — staggered fade-up, same style as loader ── */
+    /* Each child starts hidden; animation fires once page-wrap gets .revealed */
+    .hero-eyebrow,
+    .hero-names,
+    .hero-date,
+    .hero-cta {
+      opacity: 0;
+      transform: translateY(18px);
+    }
+    /* Trigger: when #page-wrap has .revealed, start the cascade */
+    #page-wrap.revealed .hero-eyebrow {
+      animation: heroFadeUp 0.9s cubic-bezier(0.22,1,0.36,1) 1.0s forwards;
+    }
+    #page-wrap.revealed .hero-names {
+      animation: heroFadeUp 1.1s cubic-bezier(0.22,1,0.36,1) 1.3s forwards;
+    }
+    #page-wrap.revealed .hero-date {
+      animation: heroFadeUp 0.9s cubic-bezier(0.22,1,0.36,1) 1.7s forwards;
+    }
+    #page-wrap.revealed .hero-cta {
+      animation: heroFadeUp 0.9s cubic-bezier(0.22,1,0.36,1) 1.95s forwards;
+    }
+    @keyframes heroFadeUp {
+      from { opacity: 0; transform: translateY(18px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
     /* =====================================================
        OPENING TRANSITION — Wedding Invitation Envelope
        Palette + fonts mirror the main site exactly
@@ -699,7 +726,7 @@
       <img src="hero.jpg" alt="Swalih Rahman N & Ayisha Adabiyya P" />
     </div>
 
-    <div class="hero-content reveal">
+    <div class="hero-content">
       <p class="hero-eyebrow">Kindly join us for the Nikkah of</p>
       <div class="hero-names">
         Swalih Rahman N
