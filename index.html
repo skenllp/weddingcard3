@@ -505,7 +505,33 @@
       box-shadow: 0 6px 22px rgba(200,169,110,0.28);
     }
 
-    /* === FOOTER === */
+    /* === VIDEO SECTION === */
+    #couple-video { background: var(--ivory-dark); }
+    .video-wrap {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: var(--section-pad) clamp(1.5rem, 5vw, 3rem);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .video-container {
+      width: 100%;
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      box-shadow:
+        0 8px 40px rgba(81,19,12,0.10),
+        0 2px 8px rgba(200,163,90,0.10);
+      background: var(--charcoal);
+      margin-top: 2rem;
+      position: relative;
+    }
+    .video-container video {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
     footer { background: var(--text-dark); color: var(--text-light); text-align: center; padding: 2rem 1.5rem; }
     .footer-names { font-family: var(--font-script); font-size: clamp(2.2rem, 5vw, 3.2rem); color: var(--gold); margin-bottom: 0.5rem; }
     .footer-sub { font-family: var(--font-display); font-style: italic; font-size: 0.93rem; color: rgba(155,135,115,0.65); }
@@ -752,7 +778,8 @@
           <h3 class="person-name">Swalih Rahman N</h3>
           <p class="person-lineage">
             Son of<br />
-            Mr. __ &amp; Mrs. __
+            Mr. Saleem N &amp; Mrs. Shahar Banu M<br />
+            Nadammel, Baithu Sanah, Manakattu Parambu, Olavanna
           </p>
         </div>
         <!-- BRIDE -->
@@ -764,18 +791,58 @@
           <h3 class="person-name">Ayisha Adabiyya P</h3>
           <p class="person-lineage">
             Daughter of<br />
-            Mr. __ &amp; Mrs. __
+            Mr. Afsal P &amp; Mrs. Fasila M<br />
+            Puthalath House, UKC, Pallikkal P.O.
           </p>
         </div>
       </div>
     </div>
-    <!-- scroll arrow → events -->
+    <!-- scroll arrow → video -->
     <div class="sec-arrow">
-      <a href="#events" aria-label="Scroll to events">
+      <a href="#couple-video" aria-label="Scroll to couple video">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
       </a>
     </div>
   </section>
+
+  <!-- ===== COUPLE VIDEO ===== -->
+  <!-- <section id="couple-video">
+    <div class="video-wrap reveal">
+      <p class="eyebrow">A glimpse of us</p>
+      <h2 class="sec-title">Our Story</h2>
+
+      <div class="bot-divider">
+        <div class="bot-line"></div>
+        <svg viewBox="0 0 80 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="40" cy="15" r="5" fill="#C8A35A" opacity="0.75"/>
+          <ellipse cx="24" cy="11" rx="4" ry="7.5" fill="#8E6F62" opacity="0.65" transform="rotate(-22 24 11)"/>
+          <ellipse cx="56" cy="11" rx="4" ry="7.5" fill="#8E6F62" opacity="0.65" transform="rotate(22 56 11)"/>
+          <ellipse cx="13" cy="19" rx="2.8" ry="6" fill="#A24F45" opacity="0.5" transform="rotate(-38 13 19)"/>
+          <ellipse cx="67" cy="19" rx="2.8" ry="6" fill="#A24F45" opacity="0.5" transform="rotate(38 67 19)"/>
+        </svg>
+        <div class="bot-line"></div>
+      </div>
+
+      <div class="video-container">
+        <video
+          src="couple.mp4"
+          controls
+          playsinline
+          muted
+          preload="metadata"
+          poster="hero.jpg"
+          aria-label="Swalih Rahman N and Ayisha Adabiyya P — couple video">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </div> -->
+    <!-- scroll arrow → events -->
+    <!-- <div class="sec-arrow">
+      <a href="#events" aria-label="Scroll to events">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </a>
+    </div>
+  </section> -->
 
   <!-- ===== EVENTS ===== -->
   <section id="events">
@@ -786,7 +853,7 @@
 
       <!-- NIKKAH — single centered card -->
       <div class="event-card reveal">
-        <div class="ev-name">Nikkah</div>
+        <div class="ev-name">Reception</div>
         <div class="ev-rows">
           <div class="ev-row">
             <span class="ev-icon">&#x1F4C5;</span>
@@ -794,7 +861,7 @@
           </div>
           <div class="ev-row">
             <span class="ev-icon">&#x23F0;</span>
-            <span class="ev-text">10:30 AM</span>
+            <span class="ev-text">05:00 PM - 09:30 PM</span>
           </div>
           <div class="ev-row">
             <span class="ev-icon">&#x1F3E2;</span>
@@ -831,7 +898,7 @@
   <!-- ===== FOOTER ===== -->
   <footer id="footer">
     <div class="footer-names">Swalih Rahman N & Ayisha Adabiyya P</div>
-    <p class="footer-sub">With Regards From: __ & __</p>
+    <p class="footer-sub">With Regards From: Salman Faris N & Sanha Fathima N</p>
     <p class="footer-copy">Made with love & duas &nbsp;✨</p>
   </footer>
 
