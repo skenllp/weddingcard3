@@ -1,0 +1,43 @@
+{
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/index.html",
+      "destination": "/",
+      "permanent": true
+    }
+  ],
+  "headers": [
+    {
+      "source": "/og-image.jpg",
+      "headers": [
+        { "key": "Content-Type",                "value": "image/jpeg" },
+        { "key": "Cache-Control",               "value": "public, max-age=86400, stale-while-revalidate=604800" },
+        { "key": "Access-Control-Allow-Origin",  "value": "*" }
+      ]
+    },
+    {
+      "source": "/hero.jpg",
+      "headers": [
+        { "key": "Cache-Control",               "value": "public, max-age=86400, stale-while-revalidate=604800" },
+        { "key": "Access-Control-Allow-Origin",  "value": "*" }
+      ]
+    },
+    {
+      "source": "/couple.mp4",
+      "headers": [
+        { "key": "Content-Type",                "value": "video/mp4" },
+        { "key": "Cache-Control",               "value": "public, max-age=86400, stale-while-revalidate=604800" },
+        { "key": "Accept-Ranges",               "value": "bytes" }
+      ]
+    },
+    {
+      "source": "/(.*\\.html)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=0, must-revalidate" },
+        { "key": "X-Robots-Tag",  "value": "index, follow" }
+      ]
+    }
+  ]
+}
